@@ -146,7 +146,7 @@ function viewEmployees() {
 }
 
 function viewDepartment() {
-  let request = "SELECT * FROM department";
+  let request = "SELECT department.deptName AS department FROM department";
   db.query(request, function (err, res) {
     console.log(res);
     return homePage();
